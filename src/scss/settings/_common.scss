@@ -1,0 +1,259 @@
+//=============/=============/=============
+/*
+burger: z-index: ;
+header: z-index: 100;
+*/
+
+//=============/ _site-container /=============
+._site-container {
+  min-height: 100vh;
+  @include flex-column;
+  overflow: hidden;
+
+  &__wide {
+    width: 100%;
+    max-width: var(--max-width-wide-container);
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+
+//=============/ _container /=============
+._container {
+  width: 100%;
+  max-width: var(--max-width-container);
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+//=============/=============/=============
+._content-from-container {
+  padding-left: max(15px, calc((100% - var(--content-width)) / 2));
+}
+
+//=============/ visually-hidden /=============
+._visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+//=============/ img /=============
+._img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+//=============/ btn-reset /=============
+._btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+//=============/ list-reset /=============
+._list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+//=============/ input-reset /=============
+._input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  background-color: var(--color-white);
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+//=============/ section-offset /=============
+._section-offset {
+  padding: 120px 0;
+
+  @include medium {
+    padding: 60px 0;
+  }
+
+  @include small {
+    padding: 30px 0;
+  }
+}
+
+//=============/ section-title /=============
+._section-title {
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 130%;
+  margin-bottom: 24px;
+
+  @include medium {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  @include small {
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}
+
+//=============/ section-subtitle /=============
+._section-subtitle {
+  color: var(--color-teat-secondary);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  margin-bottom: 60px;
+
+  &--center {
+    text-align: center;
+  }
+}
+
+//=============/ main-tile /=============
+._main-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 72px;
+  line-height: 130%;
+  margin-bottom: 20px;
+
+  span {
+    color: var(--color-text-accent);
+  }
+
+  &--light {
+    color: var(--color-text-white);
+  }
+
+  &--dark {
+    color: var(--color-text-dark);
+
+    span {
+      color: inherit;
+    }
+  }
+}
+
+//=============/ main-subtile /=============
+._main-subtitle {
+  font-size: 20px;
+  line-height: 150%;
+
+  &--light {
+    color: var(--color-text-white);
+  }
+
+  &--dark {
+    color: var(--color-text-gray);
+  }
+}
+
+//=============/ main-btn /=============
+._main-btn {
+  @include flex-all-center;
+  transition: all 0.3s linear;
+  text-transform: uppercase;
+
+  &__empty {
+    color: var(--color-text-white);
+    border: 1px solid var(--color-white);
+
+    &--primary {
+      background-color: var(--color-white);
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+
+      //@media (any-hover: hover) {
+      //	&:hover {
+      //		color: var(--color-dark);
+      //		background-color: var(--color-primary);
+      //	}
+      //}
+    }
+
+    &--gray {
+      background-color: var(--color-gray);
+
+      //@media (any-hover: hover) {
+      //	&:hover {
+      //		color: var(--color-dark);
+      //		background-color: var(--color-primary);
+      //	}
+      //}
+    }
+  }
+
+  &__fill {
+    color: var(--color-text-black);
+    border: 1px solid var(--color-white);
+
+    &--primary {
+      background-color: var(--color-accent);
+      color: var(--color-white);
+      border-color: var(--color-accent);
+
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: var(--color-accent-active);
+        }
+      }
+    }
+
+    &--gray {
+      background-color: var(--color-gray);
+      border: 1px solid var(--color-gray);
+
+      //@media (any-hover: hover) {
+      //	&:hover {
+      //		color: var(--color-dark);
+      //		background-color: var(--color-primary);
+      //	}
+      //}
+    }
+  }
+}
+
+//=============/=============/=============
+//- стили для scrollbar
+//- по умолчанию для всего сайта
+//- для определенного блока нужно подставить класс этого блока
+// &::-webkit-scrollbar {
+// 	width: 5px;
+// }
+
+// &::-webkit-scrollbar-track {
+// 	background: #ссс;
+// 	border-radius: 6px;
+// }
+
+// &::-webkit-scrollbar-thumb {
+// 	background: #000;
+// 	border-radius: 6px;
+// }

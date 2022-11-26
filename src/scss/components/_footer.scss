@@ -1,0 +1,11 @@
+//=============/ FOOTER /=============
+.footer {
+	margin-top: auto;
+	height: 20px;
+
+	&__container {
+		text-align: center;
+		height: 100%;
+		background-color: var(--color-accent);
+	}
+}

@@ -1,0 +1,32 @@
+//=============/ SPOILER /=============
+._spoiler {
+	position: relative;
+
+	&__btn {
+		padding: 10px 40px;
+		box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.7);
+		transition: background-color 0.4s ease;
+	}
+
+	&__btn--active {
+		background-color: $lightColor;
+	}
+
+	&:not(:last-child) {
+		margin-right: 60px;
+	}
+
+	&__droplist {
+		position: absolute;
+		top: 40px;
+		left: 0;
+		@include flex-column;
+		box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.7);
+		padding: 10px;
+		@include hide-transition;
+	}
+
+	&__droplist--active {
+		@include show;
+	}
+}

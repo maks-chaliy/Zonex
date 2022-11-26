@@ -1,0 +1,43 @@
+//=============/ BREAKPOINTS /=============
+
+@mixin extra-huge {
+	@media (max-width: (1640px)) {
+		@content;
+	}
+}
+
+@mixin huge {
+	@media (max-width: (1440px)) {
+		@content;
+	}
+}
+
+@mixin extra-large {
+	@media (max-width: (1220px)) {
+		@content;
+	}
+}
+
+@mixin large {
+	@media (max-width: (1024px)) {
+		@content;
+	}
+}
+
+@mixin medium {
+	@media (max-width: (768px)) {
+		@content;
+	}
+}
+
+@mixin small {
+	@media (max-width: (576px)) {
+		@content;
+	}
+}
+
+@mixin extra-small {
+	@media (max-width: (425px)) {
+		@content;
+	}
+}
